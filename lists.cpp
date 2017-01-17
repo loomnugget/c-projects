@@ -37,15 +37,24 @@ void addNode (struct Node *head, int n) {
   }
 }
 
+int length(struct Node *head) {
+  int length;
+  Node *current = head;
+  while(current) {
+    current = current->next;
+    length++;
+  }
+  cout << "Length: " << length << endl;
+}
+
 // Print to console
 void display(struct Node *head) {
   Node*list = head;
+  cout << "List data: ";
   while(list) {
-    cout << list->data , " ";
+    cout << list->data << " ";
     list = list->next;
   }
-  // add spaces to output
-  cout << endl;
   cout << endl;
 }
 
@@ -54,5 +63,8 @@ int main() {
   struct Node *newHead;
   struct Node *head = new Node;
   init(head,10);
+  addNode(head, 20);
+  addNode(head, 30);
+  length(head);
   display(head);
 }
