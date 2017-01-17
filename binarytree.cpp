@@ -50,8 +50,21 @@ void BinaryTree::insert(int key, node *leaf){
     if (leaf->left!=NULL)
       insert(key, leaf->left);
     else {
-
+      leaf->left = new Node;
+      leaf->left->value=key
+      // Set left and right child nodes of left node to null
+      leaf->left->left=NULL;
+      leaf->left->right=NULL;
     }
-
+  }
+  else if(key>=leaf->value){
+    if(leaf->right!=NULL)
+    insert(key, leaf->right);
+    else{
+      leaf->right = new Node;
+      leaf->right->value=key
+      leaf->right->left=NULL;
+      leaf->right->right=NULL;
+    }
   }
 }
