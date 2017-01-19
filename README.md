@@ -1,5 +1,6 @@
-## C++ and Data Structures Notes
+## Beginner C++ Exercises
 
+## C++ and Data Structures Notes
 # C++ Classes
 - Classes contain constructor and destructor functions
 - Destructor is denoted by a ~ and cleans up memory after the Class
